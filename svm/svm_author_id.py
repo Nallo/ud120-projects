@@ -62,7 +62,7 @@ from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(labels_test, pred)
 
 ### display the accuracy
-print "Accuracy:", accuracy
+print "Accuracy:", round(accuracy, 3)
 
 
 #########################################################
