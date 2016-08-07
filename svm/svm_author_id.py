@@ -50,6 +50,10 @@ t0 = time()
 pred = clf.predict(features_test)
 print "prediction time:", round(time()-t0, 3), "s"
 
+print "Item #10", pred[10]
+print "Item #26", pred[26]
+print "Item #50", pred[50]
+
 import numpy as np
 print "Element in class 1:", np.count_nonzero(pred)
 
