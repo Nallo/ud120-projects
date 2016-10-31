@@ -13,11 +13,14 @@ def outlierCleaner(predictions, ages, net_worths):
 
     cleaned_data = []
 
-    ### Loop thorugh the data
-    for idx in xrange(len(predictions)):
+    ### We need to cut the data size to a 90%
+    data_size = len(predictions)
+    reduced_data_size = int(data_size * 0.9)
+
+    for idx in xrange(data_size):
         pred = predictions[idx][0]
         net_worth = net_worths[idx][0]
         error = (pred - net_worth) ** 2
         cleaned_data.append((ages[idx][0], net_worth, error))
 
-    return sorted(cleaned_data, key=lambda x: x[2])[:81]
+    return sorted(cleaned_data, key=lambda x: x[2])[:reduced_data_size]
