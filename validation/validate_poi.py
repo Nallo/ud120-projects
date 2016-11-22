@@ -27,6 +27,31 @@ labels, features = targetFeatureSplit(data)
 
 
 
-### it's all yours from here forward!  
+### 1. Create a decision tree with default parameters.
+from sklearn import tree
+clf = tree.DecisionTreeClassifier()
 
+### 2. Fit the decision tree on the whole dataset.
+clf.fit(features, labels)
 
+### 3. Compute the decision tree's score on the training set
+###    should lead to a score close to 100%.
+print 'overfitted decision tree score: %.2f' % clf.score(features, labels)
+
+### 4. Split the input data into trainig (70%) and test (30%).
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.3, random_state=42)
+
+### 5. Print training / test set sizes.
+print 'Dataset size     ', len(features), '(100%)'
+print 'Test set size    ', len(X_test),   '(30%)'
+print 'Training set size', len(X_train),  '(70%)'
+
+### 6. Create another decision tree with default parameters to use on trainig set.
+clf2 = tree.DecisionTreeClassifier()
+
+### 7. Fit the decision tree on the training set.
+clf2.fit(X_train, y_train)
+
+### 8. Compute the decision tree's score.
+print 'splitted decision tree score: %.2f' % clf2.score(X_test, y_test)
