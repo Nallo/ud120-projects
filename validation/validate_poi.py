@@ -10,6 +10,7 @@
     After that, it's not our code anymore--it's yours!
 """
 
+from time import time
 import pickle
 import sys
 sys.path.append("../tools/")
@@ -55,3 +56,19 @@ clf2.fit(X_train, y_train)
 
 ### 8. Compute the decision tree's score.
 print 'splitted decision tree score: %.2f' % clf2.score(X_test, y_test)
+
+### 9. GridSearch section (extra)
+from sklearn.grid_search import GridSearchCV
+
+print "Fitting the classifier to the training set"
+t0 = time()
+param_grid = {}
+param_grid['criterion'] = ['gini', 'entropy']
+param_grid['min_samples_split'] = [1, 10, 100, 1e3]
+
+clf3 = GridSearchCV(tree.DecisionTreeClassifier(), param_grid)
+clf3 = clf3.fit(X_train, y_train)
+print "done in %0.3fs" % (time() - t0)
+print "Best estimator found by grid search:"
+print clf3.best_estimator_
+print 'optimized decision tree score: %.2f' % clf3.score(X_test, y_test)
