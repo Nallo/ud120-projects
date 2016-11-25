@@ -7,9 +7,9 @@ overfitting.
 _Learning the parameters of a prediction function and testing it on the same data
 is a methodological mistake: a model that would just repeat the labels of the
 samples that it has just seen would have a perfect score but would fail to
-predict anything useful on yet-unseen data. This situation is called overfitting.
+predict anything useful on yet-unseen data. This situation is called overfitting._
 
-To avoid it, it is common practice when performing a (supervised) machine learning
+_To avoid it, it is common practice when performing a (supervised) machine learning
 experiment to hold out part of the available data as a **test set**._ - [Sklearn Documentation](http://scikit-learn.org/stable/modules/cross_validation.html).
 
 In cross-validating our algorithm we usually split the dataset in two parts:
