@@ -46,16 +46,18 @@ PCA gotcha
 PCA in Sklearn
 ==============
 
-    ### 1. import RandomizedPCA.
-    from sklearn.decomposition import RandomizedPCA
+```python
+### 1. import RandomizedPCA.
+from sklearn.decomposition import RandomizedPCA
 
-    ### 2. Instantiace the PCA object and fit it to the training data.
-    pca = RandomizedPCA(n_components=2).fit(X_train)
+### 2. Instantiace the PCA object and fit it to the training data.
+pca = RandomizedPCA(n_components=2).fit(X_train)
 
-    ### 3. Transform the input data after running PCA.
-    X_train_pca = pca.transform(X_train)
-    X_test_pca = pca.transform(X_test)
+### 3. Transform the input data after running PCA.
+X_train_pca = pca.transform(X_train)
+X_test_pca = pca.transform(X_test)
 
-    ### 4. Display the variance of the max and the second-max PCs.
-    print "variance of the first PC %f" % pca.explained_variance_ratio_[0]
-    print "variance of the second PC %f" % pca.explained_variance_ratio_[1]
+### 4. Display the variance of the max and the second-max PCs.
+print "variance of the first PC %f" % pca.explained_variance_ratio_[0]
+print "variance of the second PC %f" % pca.explained_variance_ratio_[1]
+```
