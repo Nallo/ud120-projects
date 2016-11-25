@@ -60,22 +60,24 @@ many combinations in only a couple extra lines of code.
 
 Let see the GridSearchVC in action.
 
-    #### 1. Define the algorithm to use in the classifier.
-    svr = svm.SVC()
+```python
+#### 1. Define the algorithm to use in the classifier.
+svr = svm.SVC()
 
-    #### 2. Define the parameters to be tuned for the algorithm.
-    parameters = {'kernel':('linear', 'rbf'), 'C':[1, 10]}
+#### 2. Define the parameters to be tuned for the algorithm.
+parameters = {'kernel':('linear', 'rbf'), 'C':[1, 10]}
 
-    #### 3. Create the classifier which generates the grid of parameters.
-    clf = grid_search.GridSearchCV(svr, parameters)
+#### 3. Create the classifier which generates the grid of parameters.
+clf = grid_search.GridSearchCV(svr, parameters)
 
-    #### 4. The fit function tries all the parameter combinations and returns
-    ####    a fitted classifier that is automatically tuned to the optimal parameter
-    ####    combination.
-    clf.fit(iris.data, iris.target)
+#### 4. The fit function tries all the parameter combinations and returns
+####    a fitted classifier that is automatically tuned to the optimal parameter
+####    combination.
+clf.fit(iris.data, iris.target)
 
-    #### 5. Here is the magic result - the best parameters combination.
-    clf.best_params_
+#### 5. Here is the magic result - the best parameters combination.
+clf.best_params_
+```
 
 Focusing a bit more on the second line of code, the _parameters_ dictionary will
 be used by _GridSearchVC_ to generate a 2 x 2 = 4 classifiers with all the
