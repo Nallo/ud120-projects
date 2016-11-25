@@ -10,8 +10,7 @@ samples that it has just seen would have a perfect score but would fail to
 predict anything useful on yet-unseen data. This situation is called overfitting.
 
 To avoid it, it is common practice when performing a (supervised) machine learning
-experiment to hold out part of the available data as a **test set**._
- - [Sklearn Documentation](http://scikit-learn.org/stable/modules/cross_validation.html).
+experiment to hold out part of the available data as a **test set**._ - [Sklearn Documentation](http://scikit-learn.org/stable/modules/cross_validation.html).
 
 In cross-validating our algorithm we usually split the dataset in two parts:
 
