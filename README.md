@@ -14,3 +14,19 @@ You can contact me at [s.martinallo@gmail.com](mailto: s.martinallo@gmail.com).
 This is my first course on Machine Learning therefore, any feedback is more than welcome.
 
 _Nallo_
+
+Notes
+=====
+
+- [ ] Decision Tree
+- [ ] Evaluation
+- [ ] Feature Selection
+- [ ] K-Means
+- [ ] Naive Bayes
+- [ ] Outliers
+- [ ] Feature Selection
+- [x] PCA
+- [ ] Regression
+- [ ] SVM
+- [ ] Text Learning
+- [x] Validation
