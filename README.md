@@ -25,8 +25,8 @@ Notes
 - [ ] Naive Bayes
 - [ ] Outliers
 - [ ] Feature Selection
-- [x] PCA
+- [x] [PCA](pca)
 - [ ] Regression
 - [ ] SVM
 - [ ] Text Learning
-- [x] Validation
+- [x] [Validation](validation/)
