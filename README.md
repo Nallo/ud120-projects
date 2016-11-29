@@ -19,7 +19,7 @@ Notes
 =====
 
 - [ ] Decision Tree
-- [ ] Evaluation
+- [x] [Evaluation](evaluation)
 - [ ] Feature Selection
 - [ ] K-Means
 - [ ] Naive Bayes
@@ -29,4 +29,4 @@ Notes
 - [ ] Regression
 - [ ] SVM
 - [ ] Text Learning
-- [x] [Validation](validation/)
+- [x] [Validation](validation)
