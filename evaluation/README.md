@@ -15,7 +15,7 @@ Accuracy := -------------------------------------------
 However, accuracy has some shortcoming when:
 
   * Classed are skewed (denominator of the formula is a small number)
-  * We want to min the error of misclassifying a data points
+  * We want to min the error of misclassified data points
 
 In some cases assigning a label to a data point can lead to serious consequences.
 Think about an algorithm that classifies a person with cancer disease.
