@@ -24,7 +24,6 @@ Notes
 - [ ] K-Means
 - [ ] Naive Bayes
 - [ ] Outliers
-- [ ] Feature Selection
 - [x] [PCA](pca)
 - [ ] Regression
 - [ ] SVM
